@@ -1,1 +1,2 @@
 * [Home](/)
+* [Appendix](appendix.md)
