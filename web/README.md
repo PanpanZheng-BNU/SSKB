@@ -1,3 +1,5 @@
+[1](#MyClass)
+<a href="#MyClass">MyClass</a>
 ## 0. 可控性分析的对象——LTI系统
 对于如下微分方程形式的系统我们称之为**线性非时变系统 (LTI, linear time-invariant)**
 $$
@@ -30,8 +32,11 @@ $$
 
 > [!note|label:Example1 - 可控性判定] 
 > 对于下图所表述的一个系统
-> ![](https://new-pic-zpp.oss-cn-guangzhou.aliyuncs.com/pic/202312191515061.svg)
+> 
+> <figure><img src="https://new-pic-zpp.oss-cn-guangzhou.aliyuncs.com/pic/202312191515061.svg"/><figcaption style="text-align:center"><strong>fig.e.1</strong> 蓝色节点表示系统的输入节点，红色节点表示目标控制节点</figcaption></figure>
+>
 > 据此，可获得如下三个矩阵：其中 $a_{ij} \neq 0$ 且相互独立，$a_{ij}$ 表示存在从节点 $X_{j}$ 到节点 $X_{i}$ 的有向连接；而 $b_{ik}$ 表示存在刺激 $k$ 向节点 $i$ 的连接
+> 
 > $$\begin{gather*}  A =  \begin{bmatrix} 0  & 0 & 0  & 0  \\ * & 0 & 0 & 0 \\ * & 0 & 0 & 0 \\ 0 & 0 & * & 0 \end{bmatrix} \implies\begin{bmatrix} 0  & 0 & 0  & 0  \\ a_{21} & 0 & 0 & 0 \\ a_{31} & 0 & 0 & 0 \\ 0 & 0 & a_{43} & 0 \end{bmatrix}  \\ \\  B =  \begin{bmatrix} * \\ 0 \\ 0 \\ 0 \end{bmatrix} \implies \begin{bmatrix} b_{11}  \\ 0 \\ 0 \\ 0 \end{bmatrix} \\ \\ C =  \begin{bmatrix} 0 & 1  & 0 & 0 \\ 0 & 0 & 0 & 1 \end{bmatrix} \implies  \begin{bmatrix} 0 & c_{12}  & 0 & 0  \\ 0  & 0 & 0 & c_{24} \end{bmatrix} \end{gather*} $$
 > 然后我们对这些抽象独立变量进行计算，得到矩阵 $[CB,CAB,CA^{2}B,CA^{3}B]$
 > $$ K =[CB,\,CAB,\,CA^{2}B,\, CA^{3}B] =  \begin{bmatrix} 0  & c_{12}b_{11}a_{21}  & 0 & 0 \\ 0  & 0  & c_{24}b_{11}a_{43}a_{31} & 0 \end{bmatrix} $$
@@ -73,14 +78,20 @@ $$
  2. 在第一步的基础上，向第一步所得的子网络中依次加入 $G_{D}$ 中的节点（及其相关的连边），直到新的子网络无法完全由外部刺激 $V_{S}$ 控制为止。并得到一个新子图 $G_{F}$，记同属于子图 $G_{D}$ 和 $G_{F}$ 的节点为 $V_{D-}$。
  3. 寻找从集合 $V_{D-}$ 向 $V_{M}$ 的**最大匹配 (maximum matching)**，并通过匹配获得节点集合 $U\subseteq V_{M}$。集合 $U$ 的**势 (cardinality)**，即集合中的元素个数为可控节点数的最小值。
 
+
 ## 4. 举例
 运用以上的分析方法，我们可以模拟计算和对比正常线虫的可控肌肉数目和消融某类神经元后的线虫的可控肌肉数目，进而判断所消融的神经元对于线虫的运动是否重要。
 
 <h1 style="text-align:center">Reference</h1>
 
-<small>[1](https://ieeexplore.ieee.org/abstract/document/58507/) Murota, K., & Poljak, S. (1990). Note on a graph-theoretic criterion for structural output controllability. _IEEE Transactions on Automatic Control_, _35_(8), 939-942.</small> 
+<small>[1](https://ieeexplore.ieee.org/abstract/document/58507/) Murota, K., & Poljak, S. (1990). Note on a graph-theoretic criterion for structural output controllability. _IEEE Transactions on Automatic Control_, _35_(8), 939-942.</small> <a name="MyClass"></a>
+
 
 <small>[2](https://doi.org/10.1038/nature24056) Yan, G., Vértes, P. E., Towlson, E. K., Chew, Y. L., Walker, D. S., Schafer, W. R., & Barabási, A. L. (2017). Network control principles predict neuron function in the Caenorhabditis elegans connectome. _Nature_, _550_(7677), 519-523.</small>  
+
+
+
+
 
 
 

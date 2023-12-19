@@ -33,7 +33,7 @@
         name: '',
         repo: '',
         loadSidebar: true,
-        subMaxLevel: 2,
+        subMaxLevel: 0,
         'flexible-alerts': {
           style: 'flat',
           comment: {
@@ -50,13 +50,13 @@
             className: 'note'
           }
         },
-      //      latex: {
-      //        inlineMath   : [['$', '$'], ['\\(', '\\)']], // default
-      //        displayMath  : [['$$', '$$']],               // default
-      //      },
         alias: {
           '/.*/_sidebar.md': '/_sidebar.md'
         },
+				latex: {
+					inlineMath   : [['$', '$'], ['\\(', '\\)']], // default
+					displayMath  : [['$$', '$$']],               // default
+				},
         mermaidConfig: {
           querySelector: ".mermaid"
         },
@@ -70,13 +70,13 @@
     <!-- Docsify v4 -->
     <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
     <!--mathjax begin-->
-    <!--<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>-->
-    <!--<script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>-->
+		<script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
     <!--mathjax end-->
     <!--katex begin-->
-    <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
-    <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
+    <!--<script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>-->
+    <!--<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />-->
+    <!--<script src="//cdn.jsdelivr.net/npm/marked@4"></script>-->
     <!-- CDN files for docsify-katex -->
     <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
     <!--katex end-->
@@ -106,6 +106,7 @@
    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
 
+	 <script src="https://cdn.jsdelivr.net/npm/docsify-wikilink@1"></script>
 
 		<!-- body -->
   </body>
