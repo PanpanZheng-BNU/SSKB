@@ -1,3 +1,4 @@
+# Network control principles predict neuron function in the _Caenorhabditis elegans_ connectome.
 > <small>Yan, G., Vértes, P., Towlson, E. _et al._ Network control principles predict neuron function in the _Caenorhabditis elegans_ connectome. _Nature_ **550**, 519–523 (2017). https://doi.org/10.1038/nature24056</small>
 
 ## 1. 文章总结与评论
@@ -55,6 +56,12 @@ PDB这类神经元在线虫的刺激-反应过程中具有重要的作用。而�
 
 ### 1.7 对我自己的意义
 提供了一种新的研究思路。
+
+
+## 概念地图
+链接: https://www.lynkage.cn/share/2gw5py84cw86Fn4
+
+[概念地图](https://www.lynkage.cn/share/2gw5py84cw86Fn4 ':include :type=iframe width=100% height=600px')
 
 
 
